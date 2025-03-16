@@ -37,7 +37,8 @@ namespace com.example
 
 			try
 			{
-				string filePath = FilePath();
+				session.ExpiresIn = 8640000;
+                string filePath = FilePath();
 				string str = JsonConvert.SerializeObject(session);
 				using StreamWriter file = new(filePath);
 				file.Write(str);
